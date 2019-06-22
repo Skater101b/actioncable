@@ -1,0 +1,21 @@
+
+<script>
+function update_screen() {
+
+  document.getElementById('update').innerHTML = "Wait a minute"
+
+  var xhrHelicopter = new XMLHttpRequest();
+  xhrHelicopter.onreadystatechange = function () {
+    if (xhrHelicopter.readyState === 4) {
+        if (xhrHelicopter.status == 204) {
+        }
+    }
+  };
+  xhrHelicopter.open('GET', '/update/action', true);
+  xhrHelicopter.send();
+}
+</script>
+
+<div id="update"></div>
+
+<button id="update_button" onclick="update_screen()">Update Screen</button></div>
